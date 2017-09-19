@@ -300,7 +300,7 @@ block viewSales
 						+"<td style='color:#3239C6;'>"+typeDivisa+objv[i].total.toFixed(2)+"</td>"
 						+"<td style='color:#FC3803;'>"+typeDivisa+objv[i].total_proveedor.toFixed(2)+"</td>"
 						+"<td style='color:#F700D7;font-weight:bold;'> "+(objv[i].discount_percent==null?'':"-%"+objv[i].discount_percent)+"</td>"
-						+"<td>"+objv[i].fecha+" / "+objv[i].hora+"</td>"
+						+"<td>"+objv[i].fecha.split('T')[0]+" / "+objv[i].hora+"</td>"
 						+"<td>"
 							+"<i class='fa fa-search' style='color:#0066FF;font-weight:bold;cursor:pointer;' onclick=\"window.location.href='/receipt?idv="+objv[i].id_venta+"'\" title='Ver Recibo de Venta'></i>"
 							+"&nbsp;&nbsp;&nbsp;<i class='fa fa-minus-square' style='color:#FF8A00;font-weight:bold;cursor:pointer;' onclick=\"restaurarProducts("+objv[i].id_venta+");\" title='Restaurar Productos de la Venta'></i>"
