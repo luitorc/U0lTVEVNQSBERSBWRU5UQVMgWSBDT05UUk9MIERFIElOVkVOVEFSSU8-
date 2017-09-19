@@ -17,7 +17,7 @@
     "cookie-parser": "1.4.3",
     "express": "4.13.4",
     "express-session": "1.14.0",
-    "jade": "0.28.1",
+    "jade": "1.11.0",
     "node-pre-gyp": "0.6.28",
     "open": "0.0.5",
     "semver": "5.1.1",
