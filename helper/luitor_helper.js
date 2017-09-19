@@ -80,26 +80,25 @@ exports.db = function(type,dbName,callback) {
 	switch(type){
 		case 'pg':
 			var pg = require('pg');
+			// var config = {
+			// 	user: 'postgres', //env var: PGUSER 
+			// 	database: 'db_sistema_ventas', //env var: PGDATABASE 
+			// 	password: 'luitorc', //env var: PGPASSWORD 
+			// 	host: '127.0.0.1', // Server hosting the postgres database 
+			// 	port: 5433, //env var: PGPORT 
+			// 	max: 50, // max number of clients in the pool 
+			// 	idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
+			// };
 			var config = {
-				user: 'postgres', //env var: PGUSER 
-				database: 'db_sistema_ventas', //env var: PGDATABASE 
-				password: 'luitorc', //env var: PGPASSWORD 
-				host: '127.0.0.1', // Server hosting the postgres database 
-				port: 5433, //env var: PGPORT 
+				host: 'a2ss35.a2hosting.com', // Server hosting the postgres database 
+				user: 'iloredco', //env var: PGUSER 
+				password: 'supermario123', //env var: PGPASSWORD 
+				database: 'iloredco_sventas_luis', //env var: PGDATABASE 
+				port: 5432, //env var: PGPORT 
 				max: 50, // max number of clients in the pool 
 				idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
 			};
 			
-			// var config = {
-			// 	host: 'a2ss35.a2hosting.com', // Server hosting the postgres database 
-			// 	user: 'iloredco', //env var: PGUSER 
-			// 	password: 'supermario123', //env var: PGPASSWORD 
-			// 	database: 'iloredco_sistema_optica_mod01', //env var: PGDATABASE 
-			// 	port: 5432, //env var: PGPORT 
-			// 	max: 50, // max number of clients in the pool 
-			// 	idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed 
-			// };
-			// console.log("entro")
 			var pool = new pg.Pool(config);
 			pool.connect(function(err, client, done) {
 			if(err) return console.error('error fetching client from pool', err);
