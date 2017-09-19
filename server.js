@@ -58,7 +58,7 @@ app.post('/config@setDataReceipt',lt.model('config').setDataReceipt);
 /* CONFIG-FIN */
 //Access
 app.get('/', route.index);
-app.post('/user_logear',lt.controller('user').logear);
+app.post('/user@logear',lt.controller('user').logear);
 app.get('/user@session_close',lt.controller('user').session_close);
 //**
 app.get('/principal', route.principal);
