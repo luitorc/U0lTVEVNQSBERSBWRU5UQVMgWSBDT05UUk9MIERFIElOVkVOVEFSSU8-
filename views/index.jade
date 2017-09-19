@@ -44,7 +44,7 @@ body
 	script(src="lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js")
 	script.
 		function logear(){
-			$.post('/user@logear', {
+			$.post('/user_logear', {
 				login: $("#login").val()
 				,password: $("#password").val()
 			}, function(dt, textStatus, xhr) {
